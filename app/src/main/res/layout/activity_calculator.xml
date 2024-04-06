@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".calculator">
+
+    <EditText
+        android:id="@+id/edit_txt_number"
+        android:layout_width="215dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="32dp"
+        android:layout_marginEnd="96dp"
+        android:layout_marginBottom="178dp"
+        android:ems="10"
+        android:hint="Valor 1"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:typeface="normal"
+        app:layout_constraintBottom_toTopOf="@+id/txt_view_resultado"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <EditText
+        android:id="@+id/edit_txt_number2"
+        android:layout_width="219dp"
+        android:layout_height="40dp"
+        android:layout_marginStart="96dp"
+        android:layout_marginTop="10dp"
+        android:layout_marginEnd="96dp"
+        android:layout_marginBottom="10dp"
+        android:ems="10"
+        android:hint="Valor 2"
+        android:inputType="number"
+        android:textAlignment="center"
+        android:typeface="normal"
+        app:layout_constraintBottom_toTopOf="@+id/btn_soma"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_txt_number" />
+
+    <TextView
+        android:id="@+id/txt_view_resultado"
+        android:layout_width="144dp"
+        android:layout_height="42dp"
+        android:layout_marginStart="142dp"
+        android:layout_marginEnd="142dp"
+        android:layout_marginBottom="377dp"
+        android:textAlignment="center"
+        android:typeface="normal"
+        app:layout_constraintBottom_toTopOf="@+id/btn_voltar_main_calculadora"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_txt_number" />
+
+    <Button
+        android:id="@+id/btn_soma"
+        android:layout_width="118dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="80dp"
+        android:layout_marginTop="12dp"
+        android:onClick="onClickCalculator"
+        android:text="@string/somar"
+        android:textAlignment="center"
+        android:textSize="13sp"
+        android:typeface="normal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_txt_number2" />
+
+    <Button
+        android:id="@+id/btn_subtrai"
+        android:layout_width="118dp"
+        android:layout_height="51dp"
+        android:layout_marginTop="12dp"
+        android:layout_marginEnd="80dp"
+        android:onClick="onClickCalculator"
+        android:text="@string/subtrair"
+        android:textAlignment="center"
+        android:textSize="13sp"
+        android:typeface="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_txt_number2" />
+
+    <Button
+        android:id="@+id/btn_dividi"
+        android:layout_width="118dp"
+        android:layout_height="51dp"
+        android:layout_marginStart="80dp"
+        android:onClick="onClickCalculator"
+        android:text="@string/dividir"
+        android:textAlignment="center"
+        android:textSize="13sp"
+        android:typeface="normal"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_soma" />
+
+    <Button
+        android:id="@+id/btn_multiplica"
+        android:layout_width="118dp"
+        android:layout_height="51dp"
+        android:layout_marginEnd="80dp"
+        android:onClick="onClickCalculator"
+        android:text="@string/multiplicar"
+        android:textAlignment="center"
+        android:textSize="13sp"
+        android:typeface="normal"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_subtrai" />
+
+    <Button
+        android:id="@+id/btn_voltar_main_calculadora"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="162dp"
+        android:layout_marginEnd="162dp"
+        android:layout_marginBottom="30dp"
+        android:onClick="onClickVoltaMain"
+        android:text="@string/btn_voltar_para_main"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/txt_view_resultado" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

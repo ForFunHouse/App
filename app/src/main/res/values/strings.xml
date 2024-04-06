@@ -1,4 +1,15 @@
 <resources>
     <string name="app_name">App</string>
-    <string name="fibonacci">Fibonacci</string>
+    <string name="btn_encrypt_decrypt_main">Encrypt/Decrypt</string>
+    <string name="btn_fibonacci_main">Fibonacci</string>
+    <string name="btn_copia">Copia</string>
+    <string name="btn_crypt">Criptografar</string>
+    <string name="btn_decrypt">Descriptografar</string>
+    <string name="btn_voltar_para_main">Voltar</string>
+    <string name="btn_calculadora">Calculadora</string>
+    <string name="btn_calcula">Calcula</string>
+    <string name="somar">Soma</string>
+    <string name="subtrair">Subtrai</string>
+    <string name="dividir">Dividi</string>
+    <string name="multiplicar">Multiplica</string>
 </resources>

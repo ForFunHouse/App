@@ -3,7 +3,6 @@ package com.example.app;
 import android.content.Intent;
 import android.os.Bundle;
 import android.view.View;
-import android.widget.Button;
 
 import androidx.activity.EdgeToEdge;
 import androidx.appcompat.app.AppCompatActivity;
@@ -24,8 +23,16 @@ public class MainActivity extends AppCompatActivity {
             return insets;
         });
     }
-
-    public void Button_fibonacci(View v) {
-        setContentView(R.layout.activity_fibonacci);
+    public void onClickFibonacci(View v){
+        Intent fibonacci=new Intent(this, com.example.app.fibonacci.class);
+        startActivity(fibonacci);
+    }
+    public void onClickEncrypt_Decrypt(View v){
+        Intent encrypt_decrypt=new Intent(this, com.example.app.encrypt_decrypt.class);
+        startActivity(encrypt_decrypt);
+    }
+    public void onClickCalculator(View v){
+        Intent calculator=new Intent(this, com.example.app.calculator.class);
+        startActivity(calculator);
     }
 }

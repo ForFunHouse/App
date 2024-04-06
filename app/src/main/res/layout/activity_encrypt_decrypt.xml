@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context=".encrypt_decrypt">
+
+    <Button
+        android:id="@+id/btn_voltar_main_encry_decry"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onClickVoltarMain"
+        android:text="@string/btn_voltar_para_main"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_txt_encrypt_decrypt_resultado" />
+
+    <EditText
+        android:id="@+id/edit_txt_encrypt_decrypt_resultado"
+        android:layout_width="0dp"
+        android:layout_height="0dp"
+        android:layout_marginStart="67dp"
+        android:layout_marginEnd="67dp"
+        android:layout_marginBottom="229dp"
+        android:ems="10"
+        android:hint="Resultado"
+        android:inputType="text"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/btn_voltar_main_encry_decry"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_decrypt" />
+
+    <EditText
+        android:id="@+id/edit_txt_texto"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="190dp"
+        android:layout_marginBottom="8dp"
+        android:ems="10"
+        android:hint="Texto a criptografar"
+        android:inputType="text"
+        android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/btn_encrypt"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_encrypt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="12dp"
+        android:layout_marginBottom="8dp"
+        android:onClick="onClickEncrypt"
+        android:text="@string/btn_crypt"
+        app:layout_constraintBottom_toTopOf="@+id/btn_decrypt"
+        app:layout_constraintStart_toStartOf="@+id/btn_decrypt"
+        app:layout_constraintTop_toBottomOf="@+id/edit_txt_texto" />
+
+    <Button
+        android:id="@+id/btn_decrypt"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginBottom="19dp"
+        android:onClick="onClickDecrypt"
+        android:text="@string/btn_decrypt"
+        app:layout_constraintBottom_toTopOf="@+id/edit_txt_encrypt_decrypt_resultado"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/btn_encrypt" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

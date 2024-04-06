@@ -8,44 +8,69 @@
     tools:context=".fibonacci">
 
     <Button
-        android:id="@+id/button_calcula_fibonacci"
+        android:id="@+id/btn_voltar_main_fibonacci"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginBottom="15dp"
-        android:onClick="button_calcula_fibonacci"
-        android:text="Fibonacci"
-        app:layout_constraintBottom_toTopOf="@+id/editText_resultado"
+        android:layout_marginStart="160dp"
+        android:layout_marginEnd="163dp"
+        android:layout_marginBottom="32dp"
+        android:onClick="onClickVoltarMain"
+        android:text="@string/btn_voltar_para_main"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editText_vezes" />
+        app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/editText_vezes"
+        android:id="@+id/edit_txt_vezes"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:layout_marginBottom="25dp"
+        android:layout_marginTop="13dp"
         android:ems="10"
         android:hint="Vezes"
         android:inputType="text"
+        android:numeric="integer"
         android:textAlignment="center"
-        app:layout_constraintBottom_toTopOf="@+id/button_calcula_fibonacci"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
+    <Button
+        android:id="@+id/btn_calcula_fibonacci"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:onClick="onClickcalcula"
+        android:text="@string/btn_fibonacci_main"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/edit_txt_vezes" />
+
     <EditText
-        android:id="@+id/editText_resultado"
-        android:layout_width="227dp"
+        android:id="@+id/edit_txt_resultado"
+        android:layout_width="406dp"
         android:layout_height="0dp"
-        android:layout_marginBottom="129dp"
+        android:layout_marginTop="108dp"
         android:ems="10"
         android:hint="Resultado"
         android:inputType="text"
+        android:nestedScrollingEnabled="true"
         android:textAlignment="center"
+        app:layout_constraintBottom_toTopOf="@+id/btn_copia_txt_fibonacci"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <Button
+        android:id="@+id/btn_copia_txt_fibonacci"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="161dp"
+        android:layout_marginEnd="160dp"
+        android:layout_marginBottom="97dp"
+        android:onClick="onClickcopyclipboard"
+        android:text="@string/btn_copia"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/button_calcula_fibonacci" />
+        app:layout_constraintTop_toBottomOf="@+id/edit_txt_resultado" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
